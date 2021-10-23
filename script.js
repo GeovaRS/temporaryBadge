@@ -62,7 +62,7 @@ function getGitHubProfileInfos() {
       userName.textContent = data.name
 
       userBio.textContent = data.bio
-      
+
       userImage.src = data.avatar_url
 
       userLink.href = data.html_url
@@ -73,4 +73,27 @@ function getGitHubProfileInfos() {
 
 getGitHubProfileInfos()
 
-function exchangeCard() {}
+const backgrounds = {
+  back1: 'colorBackground1',
+  back2: 'colorBackground2',
+  deg1: 'degrade1',
+  deg2: 'degrade2',
+  fil1: 'fillet1',
+  fil2: 'fillet2',
+  font1: 'fontBody1',
+  font2: 'fontBody2'
+}
+
+function exchangeCard() {
+  if ((document.getElementById(backgrounds.deg1).id = backgrounds.deg1)) {
+    document.getElementById(backgrounds.deg1).id = backgrounds.deg2
+    document.getElementById(backgrounds.back1).id = backgrounds.back2
+    document.getElementById(backgrounds.fil1).id = backgrounds.fil2
+  } else if (
+    (document.getElementById(backgrounds.deg2).id = backgrounds.deg2)
+  ) {
+    document.getElementById(backgrounds.deg2).id = backgrounds.deg1
+    document.getElementById(backgrounds.back2).id = backgrounds.back1
+    document.getElementById(backgrounds.fil2).id = backgrounds.fil1
+  }
+}
